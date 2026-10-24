@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vola</title>
+<meta name="description" content="Budget du jour, dépenses, objectifs, prêts et mobile money (MVola, Orange Money, Airtel Money). Données stockées sur ton iPhone.">
+<meta name="theme-color" content="#0B4F3B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vola">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css?v=202610242210">
+</head>
+<body>
+<div id="app">
+  <header id="topbar" class="topbar"></header>
+  <main id="screen" class="screen"></main>
+  <nav id="tabbar" aria-label="Navigation principale"></nav>
+</div>
+<div id="sheets"></div>
+<div id="toasts" aria-live="polite"></div>
+<div id="lock" hidden></div>
+<div id="onb" hidden></div>
+<noscript><p style="padding:24px;font-family:system-ui">Vola a besoin de JavaScript pour fonctionner.</p></noscript>
+<script src="app.js?v=202610242210" defer></script>
+</body>
+</html>
