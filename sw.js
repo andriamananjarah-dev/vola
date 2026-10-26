@@ -1,5 +1,5 @@
 // Service worker de Vola : fonctionnement hors connexion et mises à jour « tout ou rien ».
-const V = '202610260633';
+const V = '202610260710';
 const CACHE = 'vola-' + V;
 const ASSETS = ["./","index.html","app.js","app.css","manifest.webmanifest","fonts/archivo.woff2","icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-512.png","icons/favicon-32.png"];
 // Fichiers qui portent le numéro de version : s'ils ne correspondent pas, la mise à jour est refusée.
@@ -47,6 +47,7 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  if (url.searchParams.has('check')) return; // diagnostic : toujours le fichier publié sur le serveur
   event.respondWith((async () => {
     // Uniquement le cache de CETTE version : jamais un fichier d'une ancienne version.
     const cache = await caches.open(CACHE);
