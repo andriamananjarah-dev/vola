@@ -1,5 +1,5 @@
 // Service worker de Vola : fonctionnement hors connexion et mises à jour « tout ou rien ».
-const V = '202610261143';
+const V = '202610270451';
 const CACHE = 'vola-' + V;
 // Fichiers essentiels : ils portent le numéro de version et doivent tous correspondre, sinon la mise à jour est refusée.
 const CORE = ['./', 'index.html', 'app.js', 'app.css'];
